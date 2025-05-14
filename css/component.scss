@@ -1,0 +1,232 @@
+
+$dark-gray: #a6a6a7;
+$darkest-gray: #2e2e2e;
+$font-stack: 'Montserrat';
+$font-stack-light: 'Montserrat-light';
+$font-stack-lighter: 'Montserrat-lighter';
+$light-blue: #77cde6;
+$blue: #10a6d5;
+$white-color: white;
+$light-orange: #ffab37;
+$lighter-orange: #fdce8d;
+$light-gray: #c8c8c8;
+$grey_1: #aaabab;
+$orange: #faba62;
+$dark-orange: #ff9900;
+$white: white;
+$gray: #3c5365;
+$lightest-gray: #f4f4f4;
+$color_1: #68788c;
+
+@mixin all-margin($margin) {
+	margin: $margin;
+}
+@mixin all-padding($padding) {
+	padding: $padding;
+}
+@mixin font-size($size) {
+	font-size: $size;
+}
+@mixin font-weight($weight) {
+	font-weight: $weight;
+}
+@mixin cursor($value) {
+	cursor: $value;
+}
+.cursor-pointer {
+	@include cursor(pointer);
+}
+@mixin dis($dis) {
+	display: $dis;
+}
+@mixin just-cont($just-cont) {
+	-webkit-justify-content: $just-cont;
+	justify-content: $just-cont;
+}
+@mixin flex-dir($dir) {
+	flex-direction: $dir;
+}
+@mixin height($height) {
+	height: $height;
+}
+@mixin width($width) {
+	width: $width;
+}
+@mixin transition($value) {
+	-webkit-transition: $value;
+	transition: $value;
+}
+
+.height_100 {
+	@include height(100%);
+}
+
+.width_100 {
+	@include width(100%);
+}
+
+.width_50 {
+	@include width(50%);
+}
+
+.dis-flex {
+	/*@include dis(flex);*/
+    display: -webkit-flex;
+    -webkit-flex-flow: row-reverse wrap;
+}
+
+@mixin dis_flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+}
+
+.flex-dir-row {
+	@include flex-dir(row);
+}
+
+.flex-dir-col {
+	@include flex-dir(column);
+}
+
+@mixin position($pos) {
+	position: $pos;
+}
+
+.just-cont-space-bet {
+	@include just-cont(space-between);
+}
+
+@mixin text-align($align) {
+	text-align: $align;
+}
+
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow;
+}
+
+.just-cont-center {
+	@include just-cont(center);
+}
+
+@mixin align-item($align) {
+	align-items: $align;
+}
+
+.align-itm-center {
+	@include align-item(center);
+}
+
+@mixin transform($value) {
+	transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+	-moz-transform: $value;
+	-webkit-transform: $value;
+}
+
+@mixin left($value) {
+	left: $value;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+@mixin text-transform($value) {
+	text-transform: $value;
+}
+
+.text-transform {
+	@include text-transform(uppercase);
+}
+
+@mixin margin-top($value) {
+	margin-top: $value;
+}
+
+@mixin margin-left($value) {
+	margin-left: $value;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+}
+
+@mixin background($value) {
+	background: $value;
+}
+
+.white-bg {
+	@include background(white);
+}
+
+.pointer-events {
+	pointer-events: none;
+}
+
+.border-one-pixel {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.light-blue-border {
+	@extend .border-one-pixel;
+	border-color: $light-blue;
+}
+
+.font-ultra-light {
+	font-weight: 100;
+}
+
+.font-light {
+	font-weight: 300;
+}
+
+.font-regular {
+	font-weight: 500;
+}
+
+.font-bold {
+	font-weight: 600;
+}
+
+.text-decoration {
+	text-decoration: none;
+}
+
+.hw-hund-port {
+	height: 100vh;
+	width: 100vw;
+}
+
+.height-hund-port {
+	height: 100vh;
+}
+
+.dis-table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+
+	ul {
+		display: table-row;
+
+		li {
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+}
+
+@mixin animation($value) {
+	animation: ($value);
+	-o-animation: ($value);
+	-ms-animation: ($value);
+	-moz-animation: ($value);
+	-webkit-animation: ($value);
+}
